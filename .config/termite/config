@@ -1,7 +1,7 @@
 [options]
-font = Cozette 9
 allow_bold = true
 
+font = envypn 12
 # $BROWSER is used by default if set, with xdg-open as a fallback
 #browser = xdg-open
 
@@ -26,43 +26,42 @@ scrollbar = off
 [colors]
 
 # special
-foreground      = #debac4
-foreground_bold = #debac4
-cursor          = #debac4
-background      = #1d1f21
+foreground      = #c0c5ce
+foreground_bold = #c0c5ce
+cursor          = #c0c5ce
+background      = rgba(43,48,59,0.8)
 
 # black
-color0  = #212326
-color8  = #858e9a
+color0  = #2b303b
+color8  = #65737e
 
 # red
-color1  = #da9895
-color9  = #d8bdbb
+color1  = #bf616a
+color9  = #bf616a
 
 # green
-color2  = #a4b8c4
-color10 = #b7bfc4
+color2  = #a3be8c
+color10 = #a3be8c
 
 # yellow
-color3  = #f5c396
-color11 = #f4dfcc
+color3  = #ebcb8b
+color11 = #ebcb8b
 
 # blue
-color4  = #9bd4a5
-color12 = #bbd3c0
+color4  = #8fa1b3
+color12 = #8fa1b3
 
 # magenta
-color5  = #d6a9e8
-color13 = #e0cde8
+color5  = #b48ead
+color13 = #b48ead
 
 # cyan
-color6  = #7cb7a7
-color14 = #9eb7b1
+color6  = #96b5b4
+color14 = #96b5b4
 
 # white
-color7  = #bfb4b6
-color15 = #bfbabb
-
+color7  = #c0c5ce
+color15 = #eff1f5
 
 
 

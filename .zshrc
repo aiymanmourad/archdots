@@ -3,28 +3,58 @@
 #=======================================================
 
 export FZF_BASE=/usr/share/fzf
-export PATH=$HOME/bin:w/usr/local/bin:$PATH #path
+#add various directiories to path 
+path=(
+$HOME/bin
+$HOME/.gem/ruby/2.7.0/bin
+$HOME/perl5/bin
+$HOME/.cargo/bin
+/usr/sbin 
+)
+export PATH 
 export LANG=en_US.UTF-8 #lang
 export SSH_KEY_PATH="~/.ssh/rsa_id" #ssh key
-#export EDITOR=nvim
+export EDITOR=nvim
+export PLUG=$HOME/.zsh/plug
+export TERM=alacritty
+export CONFIG=~/.config
+export PERL5LIB="/home/aiyman/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
+export PERL_LOCAL_LIB_ROOT="/home/aiyman/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}";
+export PERL_MB_OPT="--install_base \"/home/aiyman/perl5\""
+export PERL_MM_OPT="INSTALL_BASE=/home/aiyman/perl5"
+
+alias e="$EDITOR"
+
 
 #=======================================================
 #		  Aliases
 #=======================================================
-
-
 #general aliases
 alias xrdbl="xrdb ~/.Xresources" #xres
 alias exc="chmod +x" #make exc
-alias zshx="source ~/.zshrc" #src zrc
 alias s="sudo" #su
 alias nvi="nvim" #neovim
 alias a="clear" #clr
 alias lss="ls -la" #ls la
-alias ld="ls -ld .*"
-alias cp="cp -i"
-alias mv="mv -i"
-alias f="**"
+alias ld="ls -ld .*" #ls directiories
+alias cp="cp -i" #cp interactive
+alias mv="mv -i" #mv interactive
+alias c="cat" #cat
+alias config='/usr/bin/git --git-dir=/home/aiyman/.cfg/ --work-tree=/home/aiyman' #dotfiles
+#alias f="**" work on fzf
+alias penv="printenv"
+alias src="source"
+
+#config file alias
+alias zshs="e ~/.zshrc"
+alias nvis="e $CONFIG/nvim/init.vim"
+alias polb="e $CONFIG/polybar/config"
+alias i3s="e $CONFIG/i3/config"
+alias als="e $HOME/.alacritty.yml"
+alias rcs="e $CONFIG/ranger/rc.conf"
+alias fnts="e $CONFIG/fontconfig/fonts.conf"
+alias dunsts="e $CONFIG/dunst/dunstrc"
+alias comps="e $HOME/picom.conf"
 
 #systemd aliases
 alias scunits="systemctl list-units"
@@ -59,26 +89,21 @@ alias yconf="yay -Pg"
 alias y="yay -S"
 
 #=======================================================
-#		  Antigen
+#		  Plugins
 #=======================================================
 
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
-source ~/antigen.zsh
+HISTFILE=~/.zsh_history
 
 
-antigen use oh-my-zsh
+source ~/.antigen.zsh
 
-antigen bundle pip
 
+antigen bundle Aloxaf/fzf-tab
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting 
 
-antigen bundle qoomon/zsh-lazyload
-
-antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen apply
 
 
-alias config='/usr/bin/git --git-dir=/home/aiyman/.cfg/ --work-tree=/home/aiyman'
+ZSH_AUTOSUGGEST_STRATEGY="history"

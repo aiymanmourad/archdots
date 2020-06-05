@@ -4,7 +4,7 @@ modi: "window,run,ssh";
 /*	lines: 15;*/
 /*	columns: 1;*/
 theme: "theme";
-font: "Cozette 13";
+font: "envypn 10";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/

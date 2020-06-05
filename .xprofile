@@ -1,4 +1,14 @@
+# xbindkey configs
 xbindkeys  &
-picom &
+
+#ibus for ja
+ibus-daemon &
+
+#compositor
+picom -C &
+
+#notification daemon
 dunst &
+
+#set background
 ~/.fehbg
