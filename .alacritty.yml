@@ -89,9 +89,10 @@ scrolling:
 
 # Font configuration
 font:
+  size: 7
   normal:
-    family: envypn
-    style: regular
+    family: Fira Code Nerd Font
+    style:  Retina
 
   #bold:
     # Font family
@@ -126,7 +127,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 7
+
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -145,32 +146,31 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 colors:
-  # Default colors
   primary:
-    background: '0x2b303b'
-    foreground: '0xc0c5ce'
-
-  # Normal colors
+    background: '0x2E3440'
+    foreground: '0xD8DEE9'
+  cursor:
+    text: '0x2E3440'
+    cursor: '0xD8DEE9'
   normal:
-    black:   '0x2b303b'
-    red:     '0xbf616a'
-    green:   '0xa3be8c'
-    yellow:  '0xebcb8b'
-    blue:    '0x8fa1b3'
-    magenta: '0xb48ead'
-    cyan:    '0x96b5b4'
-    white:   '0xc0c5ce'
-
-  # Bright colors
+    black: '0x3B4252'
+    red: '0xBF616A'
+    green: '0xA3BE8C'
+    yellow: '0xEBCB8B'
+    blue: '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan: '0x88C0D0'
+    white: '0xE5E9F0'
   bright:
-    black:   '0x65737e'
-    red:     '0xbf616a'
-    green:   '0xa3be8c'
-    yellow:  '0xebcb8b'
-    blue:    '0x8fa1b3'
-    magenta: '0xb48ead'
-    cyan:    '0x96b5b4'
-    white:   '0xeff1f5'
+    black: '0x4C566A'
+    red: '0xBF616A'
+    green: '0xA3BE8C'
+    yellow: '0xEBCB8B'
+    blue: '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan: '0x8FBCBB'
+    white: '0xECEFF4'
+
 
 
 
@@ -190,9 +190,7 @@ colors:
   #
   # Colors which should be used to draw the terminal cursor. If these are unset,
   # the cursor color will be the inverse of the cell color.
-  cursor:
-   text: '#C0C5CE'
-   cursor: '#C0C5CE'
+ 
 
   # Selection colors
   #
@@ -281,7 +279,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.95
+background_opacity: 0.99
 
 selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

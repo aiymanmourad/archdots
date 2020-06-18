@@ -30,7 +30,8 @@ border-bottom-size = 2
 border-bottom-color= #405B73
 
 ;font-0 = "Cozette:style=medium:size=13:antialias=false"
-font-0 = "envypn:size=10"
+;font-0 = "envypn:size=10"
+font-0 = "Inconsolata:style=medium:size=10:antialias=true"
 ;font-1 = "IPAGothic:size=9:antialias=true"
 font-1 = "Source Han Sans JP,源ノ角ゴシック JP,Source Han Sans JP Normal,源ノ角ゴシック JP Normal:style=Normal,Regular:size=9:antialias=true"
 font-2 = "Siji:size=13:antialias=false"

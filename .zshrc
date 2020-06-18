@@ -1,9 +1,6 @@
 #=======================================================
 #		  Enviorment Variables
 #=======================================================
-
-export FZF_BASE=/usr/share/fzf
-#add various directiories to path 
 path=(
 $HOME/bin
 $HOME/.gem/ruby/2.7.0/bin
@@ -12,24 +9,31 @@ $HOME/.cargo/bin
 /usr/sbin 
 )
 export PATH 
-export LANG=en_US.UTF-8 #lang
-export SSH_KEY_PATH="~/.ssh/rsa_id" #ssh key
+
+export TERM=kitty
+export TERMINAL=kitty
 export EDITOR=nvim
-export PLUG=$HOME/.zsh/plug
-export TERM=alacritty
-export CONFIG=~/.config
+export WEBSITE=162.243.161.67
+export LANG=en_US.UTF-8
+export HISTSIZE=10000
+export SAVELIST=10000
+
+#directories 
+export SSH_KEY_PATH="$HOME/.ssh/id_rsa"
+export FZF_BASE="/usr/share/fzf"
+export CONFIG="$HOME/.config"
+export HISTFILE="$HOME/.zsh_history"
 export PERL5LIB="/home/aiyman/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
 export PERL_LOCAL_LIB_ROOT="/home/aiyman/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}";
 export PERL_MB_OPT="--install_base \"/home/aiyman/perl5\""
 export PERL_MM_OPT="INSTALL_BASE=/home/aiyman/perl5"
-
-alias e="$EDITOR"
 
 
 #=======================================================
 #		  Aliases
 #=======================================================
 #general aliases
+alias e="$EDITOR"
 alias xrdbl="xrdb ~/.Xresources" #xres
 alias exc="chmod +x" #make exc
 alias s="sudo" #su
@@ -41,9 +45,10 @@ alias cp="cp -i" #cp interactive
 alias mv="mv -i" #mv interactive
 alias c="cat" #cat
 alias config='/usr/bin/git --git-dir=/home/aiyman/.cfg/ --work-tree=/home/aiyman' #dotfiles
-#alias f="**" work on fzf
+alias f="**" work on fzf
 alias penv="printenv"
 alias src="source"
+alias anti="antibody bundle < ~/.zshplug.txt > ~/.zshplug.sh"
 
 #config file alias
 alias zshs="e ~/.zshrc"
@@ -92,18 +97,5 @@ alias y="yay -S"
 #		  Plugins
 #=======================================================
 
-HISTFILE=~/.zsh_history
 
-
-source ~/.antigen.zsh
-
-
-antigen bundle Aloxaf/fzf-tab
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting 
-
-
-antigen apply
-
-
-ZSH_AUTOSUGGEST_STRATEGY="history"
+source ~/.zshplug.sh
