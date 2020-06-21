@@ -1,12 +1,31 @@
 #!/bin/zsh
-#zstyle ':completion:*' completer _complete _ignored
-#zstyle :compinstall filename '/home/aiyman/.zsh/.zshrc'
+
+autoload -Uz compinit 
+autoload -Uz promptinit
+compinit
+
+# custom prompt
+source $ZDOTDIR/prompt.zsh
+
+# menu selection
+zstyle ':completion:*' menu select
+#{TODO}zstyle ':completion:'
+#zstyle ':completion::complete:*' gain-priveleges 1
+setopt COMPLETE_ALIASES
+
+#autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+#zle -N up-line-or-beginning-search 
+#zle -N down-line-or-beginning-search
+
+#[[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
+#[[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
+
+bindkey -v
 
 HISTFILE=$ZDOTDIR/.histfile
 HISTSIZE=10000 
 SAVEHIST=10000 
 
-source $ZDOTDIR/prompt.zsh
 
 #=======================================================
 #		  Aliases
@@ -65,8 +84,7 @@ alias update="s pacman -Sy"
 alias upgrade="s pacman -Syu"
 alias psr="pacman -F"
 alias pls="pacman -Ql"
-alias pown="pacman -Qo"
-
+alias pown="pacman -Qo" 
 alias yconf="yay -Pg"
 alias y="yay -S"
 
@@ -74,12 +92,12 @@ alias y="yay -S"
 #		  Plugins
 #=======================================================
 
-source $HOME/antigen.zsh
+#source $HOME/antigen.zsh
 
-antigen bundle softmoth/zsh-vim-mode
+#antigen bundle softmoth/zsh-vim-mode
 #antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
+#antigen bundle zsh-users/zsh-syntax-highlighting
 
-antigen apply
+#antigen apply
 
 #export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"

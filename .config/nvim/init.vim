@@ -1,12 +1,10 @@
 syntax enable
 
-
 "set relativenumber
 set cmdheight=2
 set autoindent
 set hidden
-set mouse=a
-set ruler
+set noerrorbells
 set nowrap
 set smarttab
 set expandtab
@@ -14,6 +12,7 @@ set autoindent
 "set cursorline
 set smartcase
 set tabstop=4 softtabstop=4
+set shiftwidth=4
 set smartindent
 set number
 set encoding=utf-8
@@ -22,7 +21,7 @@ set noshowmode
 set nobackup
 set clipboard=unnamedplus
 highlight clear LineNr
-
+set background=dark
 "=======================================================
 "		      Vim Plug
 "=======================================================
@@ -59,13 +58,16 @@ colorscheme nord
 "coc-references
 "better mappings for coc explorer
 
-"normal mode mappings
-nmap <silent> <space>e :CocCommand explorer<CR>
-nmap <silent> <Tab> :bnext<CR>
-nmap <silent> <S-Tab> :bprevious<CR>
+inoremap jk <Esc>
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-"insert mode mappings
+nnoremap <leader>gd <Plug>(coc-definition)
+nnoremap <leader>gy <Plug>(coc-type-definition)
+nnoremap <leader>gi <Plug>(coc-implementation)
+nnoremap <leader>gr <Plug>(coc-references)
 nnoremap <silent> <A-w> :w<CR>
+nnoremap <silent> <space>e :CocCommand explorer<CR>
 nnoremap <silent> <A-e> :wq!<CR>
 "=======================================================
 "		      Vim Plug
