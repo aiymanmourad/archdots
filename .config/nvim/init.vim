@@ -2,7 +2,7 @@ syntax enable
 
 
 "set relativenumber
-"set cmdheight=2
+set cmdheight=2
 set autoindent
 set hidden
 set mouse=a
@@ -52,6 +52,12 @@ colorscheme nord
 "		      Bindings
 "=======================================================
 
+"TODO: map keys for coc code navigation:
+"coc-definition
+"coc-type-definition
+"coc-implementation
+"coc-references
+"better mappings for coc explorer
 
 "normal mode mappings
 nmap <silent> <space>e :CocCommand explorer<CR>
