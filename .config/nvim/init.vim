@@ -19,6 +19,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 set noshowmode
 set nobackup
+set relativenumber
 set clipboard=unnamedplus
 highlight clear LineNr
 set background=dark
@@ -57,17 +58,22 @@ colorscheme nord
 "coc-implementation
 "coc-references
 "better mappings for coc explorer
-
+let mapleader = ";"
+nnoremap <silent> <leader>n :bn<CR>
+nnoremap <silent> <leader>p :bp<CR>
+nnoremap <silent> <leader>d :bd<CR>
 inoremap jk <Esc>
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-nnoremap <leader>gd <Plug>(coc-definition)
-nnoremap <leader>gy <Plug>(coc-type-definition)
-nnoremap <leader>gi <Plug>(coc-implementation)
-nnoremap <leader>gr <Plug>(coc-references)
+
+nnoremap <silent> <leader>pf :Files<CR>
+nnoremap <leader>d <Plug>(coc-definition)
+nnoremap <leader>y <Plug>(coc-type-definition)
+nnoremap <leader>i <Plug>(coc-implementation)
+nnoremap <leader>r <Plug>(coc-references)
 nnoremap <silent> <A-w> :w<CR>
-nnoremap <silent> <space>e :CocCommand explorer<CR>
+nnoremap <silent> <leader>e :CocCommand explorer<CR>
 nnoremap <silent> <A-e> :wq!<CR>
 "=======================================================
 "		      Vim Plug

@@ -11,7 +11,7 @@ export VISUAL=vim nvim
 
 #directories 
 export SSH_KEY_PATH="$HOME/.ssh/id_rsa"
-export FZF_BASE="/usr/share/fzf"
+export FZF_BASE="/usr/bin/fzf"
 export CONFIG="$HOME/.config"
 export ZDOTDIR="$HOME/.zsh"
 
@@ -20,16 +20,7 @@ export PERL_LOCAL_LIB_ROOT="/home/aiyman/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOC
 export PERL_MB_OPT="--install_base \"/home/aiyman/perl5\""
 export PERL_MM_OPT="INSTALL_BASE=/home/aiyman/perl5"
 
-path=(
-$HOME/bin
-$HOME/.gem/ruby/2.7.0/bin
-$HOME/perl5/bin
-$HOME/.cargo/bin
-/usr/sbin 
-)
-export PATH 
-
-
+zsh $HOME/path.zsh &
 # xbindkey configs
 xbindkeys  &
 
