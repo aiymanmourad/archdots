@@ -1,0 +1,46 @@
+function fish_prompt
+    set -g cyan (set_color -o cyan)
+    set -g yellow (set_color -o yellow)
+    set -g red (set_color -o red)
+    set -g blue (set_color -o blue)
+    set -g green (set_color -o green)
+    set -g normal (set_color normal)
+
+    set -l initial_indicator "$green◆" 
+    set -l cwd $blue(prompt_pwd)
+    set -l suffix '❱'
+    set -l git_glyph ''
+    
+
+    set -g wsp ' '
+
+    if [ (_git_branch_name) ]
+
+    if test (_git_branch_name) = 'master'
+      set -l git_branch (_git_branch_name)
+      set git_info "$wsp $normal on (($red$git_branch$normal$git_glyph))"
+    else
+      set -l git_branch (_git_branch_name)
+      set git_info "$wsp$git_glyph $normal ($blue$git_branch$normal)"
+    end
+
+    if [ (_is_git_dirty) ]
+      set -l dirty "$yellow ✗"
+      set git_info "$git_info$dirty"
+    end
+  end
+
+
+
+  echo -n -s $initial_indicator $wsp (set_color $fish_color_user) "$USER" $normal @ (set_color $color_host) (prompt_hostname) $wsp $cwd $git_info $wsp $suffix $wsp
+end
+
+
+
+function _git_branch_name
+  echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+end
+
+function _is_git_dirty
+  echo (command git status -s --ignore-submodules=dirty ^/dev/null)
+end
