@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/aiyman/.config/fish'
+let g:netrw_dirhist_5='/home/aiyman/projects/rust/displaymanager/src'
+let g:netrw_dirhist_4='/home/aiyman/projects/rust/displaymanager'
+let g:netrw_dirhist_3='/home/aiyman/.config/nvim/autoload/plugged/nord-vim/colors'
+let g:netrw_dirhist_2='/home/aiyman/.config/nvim/autoload/plugged/nord-vim'
 let g:netrw_dirhist_1='/home/aiyman/.config'

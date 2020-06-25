@@ -22,7 +22,8 @@ set nobackup
 set relativenumber
 set clipboard=unnamedplus
 highlight clear LineNr
-set background=dark
+set termguicolors
+"set background=dark
 "=======================================================
 "		      Vim Plug
 "=======================================================
@@ -43,11 +44,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
+Plug 'sainnhe/forest-night'
+
 
 call plug#end()
 
 
-colorscheme nord
+colorscheme forest-night
 "=======================================================
 "		      Bindings
 "=======================================================

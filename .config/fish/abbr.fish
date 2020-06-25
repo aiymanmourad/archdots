@@ -1,4 +1,4 @@
-abbr -a e $EDITOR
+#abbr -a e $EDITOR
 abbr -a exc chmod +x #make exc
 abbr -a s sudo #su
 abbr -a a clear #clr
@@ -12,7 +12,7 @@ abbr -a pnv printenv
 abbr -a src source
 
 #config file abbr 
-abbr -a nvis $EDITOR $CONFIG/nvim/init.vim 
+#abbr -a nvis $EDITOR $CONFIG/nvim/init.vim 
 abbr -a polb $EDITOR $CONFIG/polybar/config
 abbr -a i3s $EDITOR $CONFIG/i3/config 
 abbr -a als $EDITOR $HOME/.alacritty.yml

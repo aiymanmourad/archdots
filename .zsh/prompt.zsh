@@ -7,4 +7,5 @@ precmd_functions+=( precmd_vcs_info )
 
 
 setopt PROMPT_SUBST
-PROMPT='百合 %n@%M ${PWD/#$HOME/~} ${vcs_info_msg_0_}${ZSH_POINTER} '
+#PROMPT='百合 %n@%M ${PWD/#$HOME/~} ${vcs_info_msg_0_}${ZSH_POINTER} '
+PROMPT='%n@%m:%15<..<%~%<<%# '
