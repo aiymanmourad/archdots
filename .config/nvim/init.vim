@@ -1,6 +1,5 @@
 syntax enable
 
-"set relativenumber
 set cmdheight=2
 set autoindent
 set hidden
@@ -20,10 +19,12 @@ set fileencoding=utf-8
 set noshowmode
 set nobackup
 set relativenumber
+set noswapfile
 set clipboard=unnamedplus
-highlight clear LineNr
 set termguicolors
-"set background=dark
+
+highlight clear LineNr
+
 "=======================================================
 "		      Vim Plug
 "=======================================================
@@ -34,52 +35,67 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/goyo'
+"Plug 'junegunn/goyo'
 Plug 'ryanoasis/vim-devicons'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'liuchengxu/vim-which-key'
+"Plug 'liuchengxu/vim-which-key'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'sainnhe/forest-night'
+Plug 'junegunn/vim-easy-align'
+"Plug 'yuttie/comfortable-motion.vim'
 
 
 call plug#end()
-
 
 colorscheme forest-night
 "=======================================================
 "		      Bindings
 "=======================================================
 
-"TODO: map keys for coc code navigation:
-"coc-definition
-"coc-type-definition
-"coc-implementation
-"coc-references
-"better mappings for coc explorer
+" map leader
 let mapleader = ";"
+
+" switch between buffers
 nnoremap <silent> <leader>n :bn<CR>
 nnoremap <silent> <leader>p :bp<CR>
 nnoremap <silent> <leader>d :bd<CR>
-inoremap jk <Esc>
+
+" escape is probably the worst vim mapping
+inoremap jk <Esc> 
+
+noremap [ {
+" autocomplete 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-
+" fzf
 nnoremap <silent> <leader>pf :Files<CR>
+
+" coc
 nnoremap <leader>d <Plug>(coc-definition)
 nnoremap <leader>y <Plug>(coc-type-definition)
 nnoremap <leader>i <Plug>(coc-implementation)
 nnoremap <leader>r <Plug>(coc-references)
-nnoremap <silent> <A-w> :w<CR>
 nnoremap <silent> <leader>e :CocCommand explorer<CR>
-nnoremap <silent> <A-e> :wq!<CR>
+
+" saving and qutting vim
+nnoremap <silent> <leader>t :wq<CR>
+nnoremap <silent> <leader>w :w<CR>
+nnoremap <silent> <leader>q :q<CR>
+nnoremap <silent> <leader>z :q!<CR>
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nnoremap ga <Plug>(EasyAlign)
 "=======================================================
-"		      Vim Plug
+"		     Configuration 
 "=======================================================
 
 let g:coc_global_extensions = [
@@ -102,8 +118,7 @@ let g:coc_global_extensions = [
 \  ]
 
 
-
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-
+let g:airline#extensions#tabline#formatter = 'jsformatter'
