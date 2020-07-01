@@ -22,7 +22,8 @@ set relativenumber
 set noswapfile
 set clipboard=unnamedplus
 set termguicolors
-
+set background=dark
+set t_Co=256    
 highlight clear LineNr
 
 "=======================================================
@@ -122,3 +123,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'jsformatter'
+
+"if exists('+termguicolors')
+  "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  "set termguicolors
+"endif

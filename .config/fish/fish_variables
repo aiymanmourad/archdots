@@ -1,24 +1,17 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-#SETUVAR FZF_COMPLETE:0
-#SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25
-#SETUVAR FZF_DISABLE_KEYBINDINGS:0
-#SETUVAR FZF_LEGACY_KEYBINDINGS:1
-#SETUVAR FZF_PREVIEW_DIR_CMD:ls
-#SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
-#SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_a:clear
-SETUVAR _fish_abbr_als:/sbin/nvim\x20/home/aiyman/\x2ealacritty\x2eyml
+SETUVAR _fish_abbr_als:nvim\x20/home/aiyman/\x2ealacritty\x2eyml
 SETUVAR _fish_abbr_c:cat
-SETUVAR _fish_abbr_comps:/sbin/nvim\x20/home/aiyman/picom\x2econf
+SETUVAR _fish_abbr_comps:nvim\x20/home/aiyman/picom\x2econf
 SETUVAR _fish_abbr_config:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x20/home/aiyman/\x2ecfg/\x20\x2d\x2dwork\x2dtree\x20/home/aiyman
 SETUVAR _fish_abbr_dots:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x20/home/aiyman/\x2ecfg/\x20\x2d\x2dwork\x2dtree\x20/home/aiyman
-SETUVAR _fish_abbr_dunsts:/sbin/nvim\x20/home/aiyman/\x2econfig/dunst/dunstrc
+SETUVAR _fish_abbr_dunsts:nvim\x20/home/aiyman/\x2econfig/dunst/dunstrc
 SETUVAR _fish_abbr_e:/sbin/nvim
 SETUVAR _fish_abbr_exc:chmod\x20\x2bx
-SETUVAR _fish_abbr_fnts:/sbin/nvim\x20/home/aiyman/\x2econfig/fontconfig/fonts\x2econf
-SETUVAR _fish_abbr_i3s:/sbin/nvim\x20/home/aiyman/\x2econfig/i3/config
+SETUVAR _fish_abbr_fnts:nvim\x20/home/aiyman/\x2econfig/fontconfig/fonts\x2econf
+SETUVAR _fish_abbr_i3s:nvim\x20/home/aiyman/\x2econfig/i3/config
 SETUVAR _fish_abbr_kts:\x24CONFIG/kitty/kitty\x2econf
 SETUVAR _fish_abbr_nvis:/sbin/nvim\x20/home/aiyman/\x2econfig/nvim/init\x2evim
 SETUVAR _fish_abbr_pi:sudo\x20pacman\x20\x2dS
@@ -26,7 +19,7 @@ SETUVAR _fish_abbr_pil:sudo\x20pacman\x20\x2dU
 SETUVAR _fish_abbr_pls:pacman\x20\x2dQl
 SETUVAR _fish_abbr_pmir:sudo\x20pacman\x20\x2dSyy
 SETUVAR _fish_abbr_pnv:printenv
-SETUVAR _fish_abbr_polb:/sbin/nvim\x20/home/aiyman/\x2econfig/polybar/config
+SETUVAR _fish_abbr_polb:nvim\x20/home/aiyman/\x2econfig/polybar/config
 SETUVAR _fish_abbr_pown:pacman\x20\x2dQo
 SETUVAR _fish_abbr_pqi:pacman\x20\x2dQi
 SETUVAR _fish_abbr_pr:sp\x20\x2dR
@@ -34,7 +27,7 @@ SETUVAR _fish_abbr_prep:pacman\x20\x2dSi
 SETUVAR _fish_abbr_prm:sudo\x20pacman\x20\x2dR
 SETUVAR _fish_abbr_ps:pacman\x20\x2dSs
 SETUVAR _fish_abbr_psr:pacman\x20\x2dF
-SETUVAR _fish_abbr_rcs:/sbin/nvim\x20/home/aiyman/\x2econfig/ranger/rc\x2econf
+SETUVAR _fish_abbr_rcs:nvim\x20/home/aiyman/\x2econfig/ranger/rc\x2econf
 SETUVAR _fish_abbr_s:sudo
 SETUVAR _fish_abbr_sctl:systemctl
 SETUVAR _fish_abbr_sp:s\x20pacman
